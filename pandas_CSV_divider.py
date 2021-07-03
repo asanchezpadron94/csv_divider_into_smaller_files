@@ -8,7 +8,7 @@ import numpy as np
 file_path = ''
 
 # Insert the total of rows that you would like each file to have:
-number_of_rows_per_file = 9999
+number_of_rows_per_file = 10000
 
 # Asing the adress where you want your files to be:
 personal_down_path = ''
@@ -33,14 +33,8 @@ def print_csv(table_to_csv, file_number):
     # Asing the adress where you want your files to be:
     down_path = personal_down_path + '{}'.format('part_num_' + str(file_number) + '.csv')
 
-    if file_number == 1:
-
-        # Save the csv part into the adress:
-        table_to_csv.to_csv(down_path, index = False, sep = ',')
-
-    else:
-        # Save the csv part into the adress:
-        table_to_csv.to_csv(down_path, index = False, sep = ',', header = False)
+    # Save the csv part into the adress:
+    table_to_csv.to_csv(down_path, index = False, sep = ',')
 
 
 # This is a func to divide the files.
